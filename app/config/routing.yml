@@ -1,0 +1,5 @@
+vdv_common:
+    resource: "@VDVCommonBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
