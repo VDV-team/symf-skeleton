@@ -1,6 +1,6 @@
 <?php
 
-namespace Team\PamsBundle\Entity;
+namespace VDV\CommonBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\Role\Role;
