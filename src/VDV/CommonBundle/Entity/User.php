@@ -3,6 +3,7 @@
 namespace VDV\CommonBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
@@ -11,8 +12,8 @@ use FOS\UserBundle\Entity\User as BaseUser;
 /**
  * User
  *
+ * @ORM\Entity(repositoryClass="VDV\CommonBundle\Entity\UserGroup")
  * @ORM\Table(name="users")
- * @ORM\Entity(repositoryClass="Team\PamsBundle\Entity\UserRepository")
  */
 class User extends BaseUser
 {
@@ -110,23 +111,36 @@ class User extends BaseUser
     /**
      * Set userGroup
      *
-     * @param \Team\PamsBundle\Entity\UserGroup $userGroup
+     * @param \VDV\CommonBundle\Entity\UserGroup $userGroup
      * @return User
      */
-    public function setUserGroup(\Team\PamsBundle\Entity\UserGroup $userGroup = null)
+    public function setUserGroup(\VDV\CommonBundle\Entity\UserGroup $userGroup = null)
     {
         $this->userGroup = $userGroup;
-    
+
         return $this;
     }
 
     /**
      * Get userGroup
      *
-     * @return \Team\PamsBundle\Entity\UserGroup 
+     * @return \VDV\CommonBundle\Entity\UserGroup
      */
     public function getUserGroup()
     {
         return $this->userGroup;
+    }
+}
+
+/**
+ * UserGroup
+ */
+class UserGroup extends EntityRepository {
+
+    public function getAdmin()
+    {
+        return $this->getEntityManager()
+            ->createQuery('select * from users where users_groups_id = 1')
+            ->getResults;
     }
 }
