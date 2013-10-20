@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "61e5c37d6b3ed6a063208196c3b0b799",
+    "hash": "597898eeb1df78b51f9838e319959b93",
     "packages": [
         {
             "name": "craue/formflow-bundle",
@@ -1204,12 +1204,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
-                "reference": "94c5863f28e6ab0cfa6f3f4e81d06b27ff4c30e5"
+                "reference": "2a45b6dc8b85f4b6186829d37eedd702822efcb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/94c5863f28e6ab0cfa6f3f4e81d06b27ff4c30e5",
-                "reference": "94c5863f28e6ab0cfa6f3f4e81d06b27ff4c30e5",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/2a45b6dc8b85f4b6186829d37eedd702822efcb9",
+                "reference": "2a45b6dc8b85f4b6186829d37eedd702822efcb9",
                 "shasum": ""
             },
             "require": {
@@ -1258,7 +1258,7 @@
                 "form",
                 "template"
             ],
-            "time": "2013-10-15 19:47:07"
+            "time": "2013-10-16 21:33:19"
         },
         {
             "name": "mopa/composer-bridge",
