@@ -4,6 +4,26 @@
     Home page
 {% endblock title %}
 
+{% block head_style %}
+
+    {% stylesheets
+    '@VDVCommonBundle/Resources/public/css/flat-ui.css'
+    '@VDVCommonBundle/Resources/public/bootstrap/css/bootstrap.css'
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+    {% endstylesheets %}
+
+    {% block head_script %}
+        {# Overwrite this block to add your own js here, to get them generated into final files #}
+        {% javascripts
+        'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock head_script %}
+
+{% endblock head_style %}
+
 {% block body %}
     <h1>Hello world!</h1>
 {% endblock body %}
